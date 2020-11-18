@@ -1,0 +1,31 @@
+﻿<Window x:Class="Lab3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100px"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="1">
+            <ItemsControl Name="icTodoList">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Label Content="{Binding Title}" x:Name="resBox" Grid.Row="1"></Label>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+        <TextBox x:Name="val1" Grid.Row="0" HorizontalAlignment="Left" Margin="80,10,0,0" Text="0,1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="val2" Grid.Row="0" HorizontalAlignment="Left" Margin="80,50,0,0" Text="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="val3" Grid.Row="0" HorizontalAlignment="Left" Margin="270,10,0,0" Text="14" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Grid.Row="0" Content="Start:" HorizontalAlignment="Left" Margin="38,6,0,0" VerticalAlignment="Top"/>
+        <Label Grid.Row="0" Content="Finish:" HorizontalAlignment="Left" Margin="32,46,0,0" VerticalAlignment="Top"/>
+        <Label Grid.Row="0" Content="n:" HorizontalAlignment="Left" Margin="246,6,0,0" VerticalAlignment="Top"/>
+        <Button Grid.Row="0" Content="Calc" HorizontalAlignment="Left" Margin="270,49,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
+    </Grid>
+</Window>

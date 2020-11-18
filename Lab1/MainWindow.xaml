@@ -1,0 +1,48 @@
+﻿<Window x:Class="Lab1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250px"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="50px"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ScrollViewer>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30px"></RowDefinition>
+                        <RowDefinition Height="30px"></RowDefinition>
+                        <RowDefinition Height="30px"></RowDefinition>
+                        <RowDefinition Height="30px"></RowDefinition>
+                        <RowDefinition Height="30px"></RowDefinition>
+                        <RowDefinition Height="30px"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Label Margin="10px 0 10px 0" Grid.Column="0" Grid.Row="0" Height="30px" VerticalAlignment="Top" Content="Value X:"></Label>
+                    <TextBox Margin="10px 0 10px 0" x:Name="val1" Grid.Column="0" Grid.Row="1" Height="30px" VerticalAlignment="Top"></TextBox>
+
+                    <Label Margin="10px 0 10px 0" Grid.Column="0" Grid.Row="2" Height="30px" VerticalAlignment="Top" Content="Value Y:"></Label>
+                    <TextBox Margin="10px 0 10px 0" x:Name="val2" Grid.Column="0" Grid.Row="3" Height="30px" VerticalAlignment="Top"></TextBox>
+
+                    <Label Margin="10px 0 10px 0" Grid.Column="0" Grid.Row="4" Height="30px" VerticalAlignment="Top" Content="Value Z:"></Label>
+                    <TextBox Margin="10px 0 10px 0" x:Name="val3" Grid.Column="0" Grid.Row="5" Height="30px" VerticalAlignment="Top"></TextBox>
+                </Grid>
+            </ScrollViewer>
+
+            <Button Grid.Row="1" VerticalAlignment="Center" Content="Calc" Click="Button_Click" Margin="10px 0 10px 0"></Button>
+        </Grid>
+
+
+
+        <TextBlock Margin="10px 0 10px 0" Grid.Column="1" Height="50px" FontSize="45px" VerticalAlignment="Center" TextAlignment="Center" x:Name="res"></TextBlock>
+    </Grid>
+</Window>
