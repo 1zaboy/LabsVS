@@ -45,8 +45,8 @@ namespace Lab3
             {
                 oldValue += S(x, i);
 
-                string str = "S:" + oldValue + "\t";
-                str += "Y: " + ((Math.Pow(x, 2) / 4) + (x / 2) + 1) * Math.Exp(x / 2);
+                string str = "S:" +Math.Round(oldValue, 3) + "\t";
+                str += "Y: " + Math.Round(((Math.Pow(x, 2) / 4) + (x / 2) + 1) * Math.Exp(x / 2), 3);
                 res.Add(new MyData() { Title = str });
                 i += 1;
             }
